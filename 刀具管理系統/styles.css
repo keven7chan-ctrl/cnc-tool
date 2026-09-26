@@ -1,0 +1,107 @@
+/* Custom Industrial Precision Theme Styles */
+
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 12s linear infinite;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+/* Tree Navigation Connector lines */
+.tree-node-content {
+    position: relative;
+    transition: all 0.15s ease-in-out;
+}
+
+.tree-node-content:hover {
+    background-color: rgba(30, 41, 59, 0.8);
+}
+
+.tree-node-content.active {
+    background-color: rgba(37, 99, 235, 0.25);
+    border-color: rgba(59, 130, 246, 0.6);
+}
+
+/* Active tab button styling */
+.tab-btn {
+    transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+    border-color: #3b82f6;
+    color: #60a5fa;
+}
+
+/* Drag and Drop Visual Cues */
+.drag-over {
+    border-color: #3b82f6 !important;
+    background-color: rgba(59, 130, 246, 0.15) !important;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3) inset;
+}
+
+.dragging {
+    opacity: 0.5;
+    transform: scale(0.98);
+}
+
+/* Print Styles for Shop Floor Presetter Sheet */
+@media print {
+    body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+    }
+
+    header, aside, #mainTabs, #globalSearchInput, button, select {
+        display: none !important;
+    }
+
+    .tab-content {
+        display: none !important;
+    }
+
+    #tab-presetter {
+        display: block !important;
+    }
+
+    #printableArea {
+        background: #ffffff !important;
+        color: #000000 !important;
+        border: none !important;
+        padding: 0 !important;
+    }
+
+    #printableArea h2, #printableArea th, #printableArea td, #printableArea div {
+        color: #000000 !important;
+    }
+
+    table {
+        border-collapse: collapse !important;
+        width: 100% !important;
+    }
+
+    th, td {
+        border: 1px solid #cccccc !important;
+        padding: 6px 8px !important;
+    }
+}
